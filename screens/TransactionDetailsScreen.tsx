@@ -1,6 +1,7 @@
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Button, Share, StyleSheet, Text, View } from "react-native";
 import { Transaction } from "../types/Transaction";
+import { formatDate } from "../utils/format";
 
 type RouteParams = {
     Details: {
@@ -26,7 +27,7 @@ export default function TransactionDetailsScreen() {
         <View style={styles.container}>
             <Text style={styles.heading}>Transaction Details</Text>
             <Text>Reference ID: {transaction.refId}</Text>
-            <Text>Date: {new Date(transaction.transferDate).toLocaleString()}</Text>
+            <Text>Transfer Date: {formatDate(transaction.transferDate)}</Text>
             <Text>Recipient: {transaction.recipientName}</Text>
             <Text>Amount: ${transaction.amount.toFixed(2)}</Text>
             <Button title="Share" onPress={onShare} />

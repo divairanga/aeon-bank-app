@@ -1,5 +1,6 @@
 import { Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Transaction } from "../types/Transaction";
+import { formatDate } from "../utils/format";
 
 type Props = {
     transaction: Transaction;
@@ -10,7 +11,7 @@ const TransactionItem = ({ transaction, onPress}: Props) => {
     return(
         <TouchableOpacity onPress={onPress} style={styles.card}>
             <Text style={styles.details}>{transaction.transferName}</Text>
-            <Text style={styles.date} >{new Date(transaction.transferDate).toLocaleDateString()}</Text>
+            <Text style={styles.date} >{formatDate(transaction.transferDate)}</Text>
             <Text style={styles.amount}>${transaction.amount.toFixed(2)}</Text>
         </TouchableOpacity>
     )

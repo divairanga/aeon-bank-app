@@ -35,4 +35,7 @@ git clone https://github.com/divairanga/aeon-bank-app.git
 cd aeon-bank-app
 
 # Install dependencies
-npm install
+npm install 
+
+#Getting Started
+npx expo start
