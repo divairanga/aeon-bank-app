@@ -31,7 +31,7 @@ Prerequisites
 Installation
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/aeon-bank-app.git
+git clone https://github.com/divairanga/aeon-bank-app.git
 cd aeon-bank-app
 
 # Install dependencies
